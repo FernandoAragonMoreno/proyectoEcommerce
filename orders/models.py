@@ -14,10 +14,10 @@ class Country(models.Model):
 
 class City(models.Model):
     idCity = models.IntegerField()
-    nameCity = models.CharField(max_length=50)
-    descriptionCity = models.CharField(max_length=200)
+    nameCity = models.CharField(max_length=255)
+    descriptionCity = models.CharField(max_length=255)
     price = models.IntegerField()
-    photo = models.ImageField(upload_to="cars")
+    photo = models.ImageField(upload_to="photo", null=True, blank=True)
     assetCity = models.BooleanField()
 
 class City_Customer(models.Model):
@@ -26,12 +26,12 @@ class City_Customer(models.Model):
 
 class Customer(models.Model):
     idCustomer = models.IntegerField()
-    nameCustomer = models.CharField(max_length=50)
+    nameCustomer = models.CharField(max_length=255)
     assetCustomer = models.BooleanField()
 
 class PaymentMethods(models.Model):
     idPaymentMethods = models.IntegerField()
-    namePaymentMethods = models.CharField(max_length=50)
+    namePaymentMethods = models.CharField(max_length=255)
     assetPaymentMethods = models.BooleanField()
 
 class PaymentMethods_Customer(models.Model):
@@ -40,10 +40,10 @@ class PaymentMethods_Customer(models.Model):
 
 class Role(models.Model):
     idRole = models.IntegerField()
-    nameRole = models.CharField(max_length=50)
+    nameRole = models.CharField(max_length=255)
     assetRole = models.BooleanField()
 
 class Seller(models.Model):
     idSeller = models.IntegerField()
-    nameSeller = models.CharField(max_length=50)
+    nameSeller = models.CharField(max_length=255)
     assetSeller = models.BooleanField()
