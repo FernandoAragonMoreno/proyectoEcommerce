@@ -17,7 +17,7 @@ class City(models.Model):
     nameCity = models.CharField(max_length=50)
     descriptionCity = models.CharField(max_length=200)
     price = models.IntegerField()
-    photo = models.ImageField(upload_to="cars")
+    photo = models.ImageField(upload_to="photo")
     assetCity = models.BooleanField()
 
 class City_Customer(models.Model):

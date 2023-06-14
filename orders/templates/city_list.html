@@ -1,0 +1,14 @@
+<!-- citylist.html -->
+
+{% extends 'base.html' %} {% block content %}
+<h1>City List</h1>
+
+<ul>
+    {% for objeto in object_list %}
+    <li>{{ objeto }}</li>
+    {% empty %}
+    <li>No hay objetos</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
